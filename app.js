@@ -1,6 +1,7 @@
 var express = require("express");
 var mongoose = require('mongoose');
 var session = require('express-session');
+var ejs = require('ejs');//1
 var mainctrl = require("./controllers/mainctrl.js");
 var adminCtrl = require("./controllers/adminCtrl.js");
 var adminStudentCtrl = require("./controllers/adminStudentCtrl.js");
@@ -22,8 +23,9 @@ app.use(session({
 }));
 
 //设置模板引擎
-app.set("view engine","ejs");
-
+app.engine('html',ejs.__express);//1
+//app.set("view engine","ejs");
+app.set('view engine', 'html');
 //中间件，路由清单
 app.get   ("/admin"					,adminCtrl.showAdminDashborad);	//管理员界面
 app.get   ("/admin/student"			,adminStudentCtrl.showAdminStudent);	// 

@@ -8,39 +8,41 @@
   <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
   <link href="/css/iconfont.css" rel="stylesheet" type="text/css"></head>
 <body class='main page'>
-  <% include ../include/header.ejs %>
+  <!-- Navbar -->
+  <% include include/header.html %>
+
   <div id='wrapper'>
-    <% include ../include/sidebar.ejs %>
+    <% include include/sidebar.html %>
+
+    <!-- Tools -->
     <section id='tools'>
       <ul class='breadcrumb' id='breadcrumb'>
-         <li>
-          <a href="/admin/course">课程清单</a>
-        </li>
-        <li class="active">
-          导入课程
-        </li>
+        <li class='title'>Dashboard</li>
         <li>
-          <a href="/admin/course/add">增加课程 </a>
+          <a href="#">Lorem</a>
+        </li>
+        <li class='active'>
+          <a href="#">ipsum</a>
         </li>
       </ul>
     </section>
+    <!-- Content -->
     <div id='content'>
       <div class='panel panel-default'>
         <div class='panel-heading'>
-          请导入JSON格式数据
+          Hierapolis Rocks!
+          <div class='panel-tools'>
+            
+          </div>
         </div>
         <div class='panel-body'>
-            <p>
-              请上传符合规定的JSON数据。
-            </p>
-            <iframe src="/template/jsonform.html" frameborder="0" width="500"></iframe>
+ 
         </div>
       </div>
     </div>
   </div>
 
-  <script type="text/javascript" src="/js/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 </html>
